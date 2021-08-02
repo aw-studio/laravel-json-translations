@@ -1,0 +1,34 @@
+{
+    "name": "aw-studio/laravel-json-translations",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jannescb",
+            "email": "jannes@aw-studio.de"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "AwStudio\\LaravelJsonTranslations\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AwStudio\\LaravelJsonTranslations\\LaravelJsonTranslationsServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
