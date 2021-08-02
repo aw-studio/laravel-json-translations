@@ -28,6 +28,7 @@ Register the route that will serve the translation file in `routes/web.php` via 
 
 ```php
 // routes/web.php
+
 use AwStudio\LaravelJsonTranslations\Facades\JsonTranslations;
 
 // this will serve https://your-app.com/my-translations.js
@@ -41,9 +42,11 @@ You can now include a local javascript using the `<script>` tag or simply use th
 @translations('my-translations')
 ```
 
-If you want to receive raw json e.g. in an api, this can be achieved as follows:
+If you want to receive raw json e.g. in an api, this can be achieved using the `json` method via the `JsonTranslations` facade:
 
 ```php
+use AwStudio\LaravelJsonTranslations\Facades\JsonTranslations;
+
 Route::get('json', function () {
     return JsonTranslations::json(['en', 'de']);
 });
