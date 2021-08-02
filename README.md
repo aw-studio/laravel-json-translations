@@ -17,7 +17,7 @@ Register the route that will serve the translation file in `routes/web.php` via 
 // routes/web.php
 use AwStudio\LaravelJsonTranslations\Facades\JsonTranslations;
 
-// this will serev under your-app.com/my-translations.js
+// this will serve https://your-app.com/my-translations.js
 JsonTranslations::javascript('my-translations', ['en', 'de']);
 ```
 
