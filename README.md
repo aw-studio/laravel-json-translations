@@ -1,7 +1,18 @@
 # Laravel Json Translations
 
 The `Laravel Json Translations` package offers a convenient way of providing all translations from the `resources/lang` directory via a route serving a javascript file as JSON object and automatically binds them to the window-object.
-This is useful when working with i18n packages in frontend-frameworks like Vue.js. 
+This is useful when working with i18n packages in frontend-frameworks like Vue.js. All translations will be provided in the following format:
+
+```json
+{
+"en": {
+    "auth": {
+        "failed": "These credentials do not match our records.",
+        "password": "The provided password is incorrect.",
+        "throttle": "Too many login attempts. Please try again in :seconds seconds."
+    }
+}
+```
 
 ## Installation
 
