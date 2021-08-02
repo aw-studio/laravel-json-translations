@@ -24,6 +24,7 @@ JsonTranslations::javascript('my-translations', ['en', 'de']);
 You can now include a local javascript using the `<script>` tag or simply use the blade-directive in a view where you need to provide the json translations:
 
 ```php
+// will render to <script src="/my-translations.js"></script>
 @translations('my-translations')
 ```
 
