@@ -16,6 +16,8 @@ This is useful when working with i18n packages in frontend-frameworks like Vue.j
 
 ## Installation
 
+The package can be installed via composer:
+
 ```bash
 composer require aw-studio/laravel-json-translations
 ```
