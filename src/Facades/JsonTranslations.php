@@ -4,11 +4,6 @@ namespace AwStudio\LaravelJsonTranslations\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @method static Builder make(Refundable | RefundableCollection $refundable)
- *
- * @see \AwStudio\LaravelJsonTranslations\JsonTranslations
- */
 class JsonTranslations extends Facade
 {
     /**
