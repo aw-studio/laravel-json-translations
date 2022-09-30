@@ -33,11 +33,21 @@ class JsonTranslations
     {
         $translations = [];
         foreach ($locales as $locale) {
-            foreach (glob(resource_path('lang/' . $locale . '/*.php')) as $file) {
-                $content = require $file;
-                $key = explode('.', basename($file))[0];
+            if (file_exists(resource_path('lang'))) {
+                foreach (glob(resource_path('lang/'.$locale.'/*.php')) as $file) {
+                    $content = require $file;
+                    $key = explode('.', basename($file))[0];
 
-                $translations[$locale][$key] = $content;
+                    $translations[$locale][$key] = $content;
+                }
+            }
+            if (file_exists(base_path('lang'))) {
+                foreach (glob(base_path('lang/'.$locale.'/*.php')) as $file) {
+                    $content = require $file;
+                    $key = explode('.', basename($file))[0];
+
+                    $translations[$locale][$key] = $content;
+                }
             }
         }
 
